@@ -6,21 +6,21 @@ let country = deliveryToCountry.toLowerCase();
 let message;
 switch (country) {
   case `китай`:
-    alert(`100 кредитов`);
+    alert(`Доставка в Китай будет стоить 100 кредитов`);
     break;
   case `чили`:
-    alert(`250 кредитов`);
+    alert(`Доставка в Чили будет стоить 250 кредитов`);
     break;
   case `австралия`:
-    alert(`170 кредитов`);
+    alert(`Доставка в Австралию будет стоить 170 кредитов`);
     break;
   case `индия`:
-    alert(`80 кредитов`);
+    alert(`Доставка в Индию будет стоить 80 кредитов`);
     break;
   case `ямайка`:
-    alert(`120 кредитов`);
+    alert(`Доставка на Ямайку будет стоить 120 кредитов`);
     break;
   default:
-    alert(`Неверное значение`);
+    alert(`В вашей стране доставка не доступна`);
 }
 console.log(message);
