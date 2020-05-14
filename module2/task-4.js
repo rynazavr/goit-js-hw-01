@@ -1,11 +1,13 @@
 `use strict`;
 const formatString = function (string) {
-  // твой код
+  let stringCutByFourtySymbols;
+  if (string.length > 40) {
+    stringCutByFourtySymbols = string.slice(0, 40) + "...";
+    return stringCutByFourtySymbols;
+  }
+  return string;
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
 console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // вернется оригинальная строка
 
@@ -25,4 +27,4 @@ console.log(
 
 Если длина строки не превышает 40 символов, функция возвращает ее в исходном виде.
 Если длина больше 40 символов, то функция обрезает строку до 40-ка символов и добавляет
- в конец строки троеточие '...', после чего возвращает укороченную версию.
+ в конец строки троеточие '...', после чего возвращает укороченную версию.*/
