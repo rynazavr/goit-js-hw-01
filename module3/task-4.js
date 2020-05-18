@@ -1,11 +1,14 @@
 `use strict`;
 const countTotalSalary = function (employees) {
-  // твой код
+  const values = Object.values(employees);
+  console.log(values);
+  let total = 0;
+  for (const value of values) {
+    total += value;
+  }
+  return total;
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
 console.log(countTotalSalary({})); // 0
 
 console.log(
