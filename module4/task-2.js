@@ -24,7 +24,7 @@ invokeInventoryAction("Medkit", inventory.add.bind(inventory));
 
 console.log(inventory.items); // ['Knife', 'Gas mask', 'Medkit']
 
-invokeInventoryAction("Gas mask", inventory.add.bind(inventory));
+invokeInventoryAction("Gas mask", inventory.remove.bind(inventory));
 // Invoking action on Gas mask
 // Removing Gas mask from inventory
 
