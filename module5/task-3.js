@@ -1,24 +1,30 @@
 `use strict`;
-const Storage = function (name) {
-  this.name = name;
-  this.items = [];
-  this.addItem = function (item) {
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
+  addItem(item) {
     this.items.push(item);
-  };
-};
+  }
+  getItems(item) {
+    //
+  }
+}
+
 const storage = new Storage([
   "Нанитоиды",
   "Пролонгер",
   "Железные жупи",
   "Антигравитатор",
 ]);
-
+//11
+//getItems() - возвращает массив текущих товаров
 const items = storage.getItems();
 console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
-
+//addItem(item) - получает новый товар и добавляет его к текущим
 storage.addItem("Дроид");
 console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
-
+//removeItem(item) - получет товар и, если он есть, удаляет его из текущих
 storage.removeItem("Пролонгер");
 console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
 
