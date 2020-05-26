@@ -3,11 +3,11 @@ class Storage {
   constructor(items) {
     this.items = items;
   }
+  getItems(item) {
+    return this.items;
+  }
   addItem(item) {
     this.items.push(item);
-  }
-  getItems(item) {
-    //
   }
 }
 
