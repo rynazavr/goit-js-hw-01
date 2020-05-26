@@ -13,7 +13,8 @@ class Storage {
   }
   //removeItem(item) - получет товар и, если он есть, удаляет его из текущих
   removeItem(item) {
-    //
+    let indexOfItemToRemove = this.items.indexOf(item);
+    this.items.splice(indexOfItemToRemove, 1);
   }
 }
 
