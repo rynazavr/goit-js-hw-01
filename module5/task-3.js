@@ -4,7 +4,7 @@ class Storage {
     this.items = items;
   }
   //getItems() - возвращает массив текущих товаров
-  getItems(item) {
+  getItems() {
     return this.items;
   }
   //addItem(item) - получает новый товар и добавляет его к текущим
