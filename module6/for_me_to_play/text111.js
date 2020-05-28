@@ -4,12 +4,12 @@
 // Перебирает
 // Не изменяет
 // Возвращает коллекцию
-console.log(`Array.prototype.filter()`);
-const nums = [1, 2, 3, 4, 5, 6];
-const filteredNumbers = nums.filter(function (num) {
-  return num < 5;
-});
-console.log(filteredNumbers);
+// console.log(`Array.prototype.filter()`);
+// const nums = [1, 2, 3, 4, 5, 6];
+// const filteredNumbers = nums.filter(function (num) {
+//   return num < 5;
+// });
+// console.log(filteredNumbers);
 //////
 
 const players = [
@@ -19,17 +19,16 @@ const players = [
   { id: "player-4", name: "Hugo", timePlayed: 430, points: 126, online: true },
   { id: "player-5", name: "Peter", timePlayed: 650, points: 954, online: true },
 ];
-const onlinePlayers = players.filter(function (player, ind, array) {
+const onlinePlayers = players.filter((player) => {
   return player.online;
 });
 console.table(onlinePlayers);
-////
-const offlinePlayers = players.filter(function (player) {
-  return !player.online;
-});
+//
+const offlinePlayers = players.filter(player => !player.online);
 console.table(offlinePlayers);
-const hardcorePlayers = players.filter(function (player) {
-  return player.timePlayed > 400;
-});
-console.table(hardcorePlayers);
+///
+// const hardcorePlayers = players.filter(function (player) {
+//   return player.timePlayed > 400;
+// });
+// console.table(hardcorePlayers);
 //вывести игроков с колличеством баллов больше 400
