@@ -1,36 +1,13 @@
 //В HTML есть список категорий ul#categories.
-<ul id="categories">
-  <li class="item">
-    <h2>Животные</h2>
 
-    <ul>
-      <li>Кот</li>
-      <li>Хомяк</li>
-      <li>Лошадь</li>
-      <li>Попугай</li>
-    </ul>
-  </li>
-  <li class="item">
-    <h2>Продукты</h2>
+const categoriesAll = document.querySelectorAll(".item");
+console.log(`В списке ${categoriesAll.length} категории`);
 
-    <ul>
-      <li>Хлеб</li>
-      <li>Петрушка</li>
-      <li>Творог</li>
-    </ul>
-  </li>
-  <li class="item">
-    <h2>Технологии</h2>
+const categoriesAllNames = categoriesAll.forEach((element) => {
+  console.log(`Категория: ${element.querySelector("h2").textContent}
+Количество элементов: ${element.querySelectorAll("li").length}`);
+});
 
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Node</li>
-    </ul>
-  </li>
-</ul>
 /*Напиши скрипт, который выполнит следующие операции.
 
 Посчитает и выведет в консоль количество категорий в ul#categories, 
