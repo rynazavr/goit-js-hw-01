@@ -34,19 +34,3 @@ function templeteImageCard(imageItem) {
 
 console.log(allLi);
 galeryUl.insertAdjacentHTML(`beforeend`, allLi);
-
-// const createGallery = (product) => {
-//   const itemLi = document.createElement(`li`);
-//   itemLi.classList.add(`images-defaut-class`);
-
-//   const imageInLi = document.createElement(`img`);
-//   imageInLi.src = images.url;
-//   imageInLi.alt = images.alt;
-//   imageInLi.classList.add(`image-default-img`);
-
-//   itemLi.append(imageInLi);
-//   return itemLi;
-// };
-
-// const imageSet = images.map((product) => createGallery(product));
-// const imageList = document.querySelector(`#gallery`).append(...imageSet);
