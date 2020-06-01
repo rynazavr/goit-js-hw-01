@@ -4,16 +4,21 @@
 .images-defaut-class {
   display: flex;
   justify-content: space-between;
-  background-color: #d63333;
+  background-color: #000000;
+  width: 800px;
+  height: 200px;
   align-items: center;
   align-content: center;
   text-decoration: none;
   list-style: none;
 }
 .image-default-img {
-  border: 1px solid #f9bd87;
   background-repeat: no-repeat;
   background-position: center;
   width: 200px;
   height: auto;
+  margin: 0 auto;
+}
+.image-default-img:hover {
+  transform: translate(-10px, -10px);
 }

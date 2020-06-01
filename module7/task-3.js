@@ -22,18 +22,31 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
-const createGallery = (product) => {
-  const itemLi = document.createElement(`li`);
-  itemLi.classList.add(`images-defaut-class`);
+const galeryUl = document.querySelector(`#gallery`);
+const allLi = images.map((imageItem) => templeteImageCard(imageItem)).join(``);
+function templeteImageCard(imageItem) {
+  return `
+  <li class="images-defaut-class">
+  <img src="${imageItem.url}" alt="${imageItem.alt}" class="image-default-img">
+  </li>
+  `;
+}
 
-  const imageInLi = document.createElement(`img`);
-  imageInLi.src = images.url;
-  imageInLi.alt = images.alt;
-  imageInLi.classList.add(`image-default-img`);
+console.log(allLi);
+galeryUl.insertAdjacentHTML(`beforeend`, allLi);
 
-  itemLi.append(imageInLi);
-  return itemLi;
-};
+// const createGallery = (product) => {
+//   const itemLi = document.createElement(`li`);
+//   itemLi.classList.add(`images-defaut-class`);
 
-const imageSet = images.map((product) => createGallery(product));
-const imageList = document.querySelector(`#gallery`).append(...imageSet);
+//   const imageInLi = document.createElement(`img`);
+//   imageInLi.src = images.url;
+//   imageInLi.alt = images.alt;
+//   imageInLi.classList.add(`image-default-img`);
+
+//   itemLi.append(imageInLi);
+//   return itemLi;
+// };
+
+// const imageSet = images.map((product) => createGallery(product));
+// const imageList = document.querySelector(`#gallery`).append(...imageSet);
