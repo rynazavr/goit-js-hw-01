@@ -1,0 +1,19 @@
+#gallery {
+  display: flex;
+}
+.images-defaut-class {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d63333;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+  list-style: none;
+}
+.image-default-img {
+  border: 1px solid #f9bd87;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: auto;
+}

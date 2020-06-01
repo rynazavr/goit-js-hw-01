@@ -18,21 +18,6 @@ const ul = ingredients.map((item) => {
 });
 
 document.querySelector(`#ingredients`).append(...ul);
-////
-// const createList = (ingredient) => {
-//   const ingredientsUl = document.querySelector(`#ingredients`);
-
-//   const ingredientsLi = document.createElement(`li`);
-//   ingredientsLi.textContent = ingredients;
-
-//   ingredientsUl.append(ingredientsLi);
-//   return ingredientsUl;
-// };
-// // console.log(createList(ingredients[1]));
-
-// ingredients.forEach((ingredient) => {
-//   console.log(createList(ingredient));
-// });
 
 /*Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, после 
   чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй 
