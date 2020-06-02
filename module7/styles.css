@@ -1,3 +1,7 @@
+.task {
+  color: red;
+  font-size: 20px;
+}
 #gallery {
   display: flex;
 }
