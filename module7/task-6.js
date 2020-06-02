@@ -13,7 +13,7 @@ inputSix.addEventListener("blur", handleInput);
 //блок событий
 
 function handleInput(event) {
-  if (inputSix.value.length < numberMax) {
+  if (inputSix.value.length <= numberMax) {
     inputSix.classList.add("valid"), inputSix.classList.remove("invalid");
   } else if (inputSix.value.length > numberMax) {
     inputSix.classList.add("invalid"), inputSix.classList.remove("valid");
