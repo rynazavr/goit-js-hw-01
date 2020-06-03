@@ -2,7 +2,9 @@ import imagelist from "./gallery-items.js";
 import { templeteImageCard } from "./gallery-skeleton.js";
 
 const galleryUl = document.querySelector(`.js-gallery`);
-const buttonClose = document.querySelector(`button[data-action="close-modal"]`);
+const buttonClose = document.querySelector(
+  `button[data-action="close-lightbox"]`
+);
 const divModal = document.querySelector(`.js-lightbox`);
 const imgModal = document.querySelector(`.lightbox__image`);
 
