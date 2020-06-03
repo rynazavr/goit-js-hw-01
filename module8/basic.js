@@ -26,11 +26,8 @@ galleryUl.addEventListener(`click`, clickList);
 buttonClose.addEventListener(`click`, clickButtonClosed);
 
 function clickList(event) {
-  window.addEventListener(`keydown`, (event) => {
-    if (event.code === `Escape`) {
-      clickButtonClosed();
-    }
-  });
+  window.addEventListener(`keydown`, onEscape);
+  //принимает onEscape функцию - закрыти модалки по ESC
   divModal.classList.add("is-open");
   console.log(event.target);
   if (event.target.nodeName !== "IMG") return;
@@ -43,4 +40,10 @@ function clickList(event) {
 
 function clickButtonClosed(event) {
   divModal.classList.remove("is-open");
+}
+//закрытие по ESC - передача функции onEscape и вызов clickButtonClosed
+function onEscape(event) {
+  if (event.code === `Escape`) {
+    clickButtonClosed();
+  }
 }
