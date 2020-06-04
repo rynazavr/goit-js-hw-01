@@ -37,6 +37,16 @@ function onEscape(event) {
   }
 }
 //прокрутка картинок в модалке
+let counter = 0;
 function clickOnModalImage(event) {
+  counter++;
+  if (counter === imagelist.length) {
+    counter = 0;
+  }
+  let new_img = imagelist[counter];
+  imgModal.src = new_img["original"];
+
   // console.log("done");
 }
+// console.log(imagelist[0]["original"]);
+// console.log(imagelist.length);
