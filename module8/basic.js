@@ -14,6 +14,9 @@ const allLi = imagelist
   .join(``);
 galleryUl.insertAdjacentHTML(`beforeend`, allLi);
 
+const newI = imagelist.map((imageItem) => imageItem.original);
+console.log(newI);
+
 //блок вызовов слушателей событий
 galleryUl.addEventListener(`click`, clickList);
 buttonClose.addEventListener(`click`, clickButtonClosed);
@@ -22,11 +25,16 @@ imgModal.addEventListener(`click`, clickOnModalImage);
 function clickList(event) {
   window.addEventListener(`keydown`, onEscape);
   //принимает onEscape функцию - закрытия модалки по ESC
-  if (event.target.nodeName !== "IMG") return;
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
   divModal.classList.add("is-open");
   imgModal.src = event.target.dataset.source;
+  newI.indexOf(event.target.dataset.source);
+  // console.log(newI.indexOf(event.target.dataset.source));
 }
 
+///закрытие модалки по клику
 function clickButtonClosed(event) {
   divModal.classList.remove("is-open");
 }
