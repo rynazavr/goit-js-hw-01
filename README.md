@@ -19,3 +19,4 @@ https://www.chartjs.org/
 https://plainjs.com/
 https://momentjs.com/ - date and time
 https://date-fns.org/  - date and time
+https://github.com/iamkun/dayjs - date and time
