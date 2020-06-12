@@ -17,4 +17,5 @@ https://github.com/videojs/video.js
 https://github.com/sampotts/plyr
 https://www.chartjs.org/
 https://plainjs.com/
-https://momentjs.com/
+https://momentjs.com/ - date and time
+https://date-fns.org/  - date and time
